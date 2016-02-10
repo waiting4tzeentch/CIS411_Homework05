@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module('booklist', ['book-directives']);
+	var app = angular.module('angularLibrary', ['book-directives']);
 
 	app.controller('BookController', ['$http',function($http){
 		var booklist = this;
@@ -12,5 +12,5 @@
 		});
 	}]);
 
-	
+
 })();
