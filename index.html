@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Ravalic - Free HTML5 Template</title>
+<title>CIS 411 Homework 05</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -70,6 +70,7 @@
 	</div>
 </div>
 
+<!--  Features section
 <div class="container-fluid features" id="section2">
 	<div class="container">
 		<div class="row">
@@ -146,7 +147,7 @@
 	</div>
 </div>
 
-
+-->
 
 
 
@@ -227,6 +228,7 @@
 	</div>
 </div>
 
+<!-- Counters
 <div class="container-fluid countspace">
 	<div class="container">
 	<div class="row">
@@ -235,35 +237,37 @@
                 <div class="counter-item">
                     <i class="glyphicon glyphicon-cloud"></i>
                     <div class="timer" data-from="0" data-to="100" data-speed="5000" data-refresh-interval="50"></div>
-                    <h5>Files uploaded</h5>                               
+                    <h5>Files uploaded</h5>
                 </div>
-            </div>  
+            </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="counter-item">
                     <i class="glyphicon glyphicon-check"></i>
                     <div class="timer" data-from="0" data-to="88" data-speed="5000" data-refresh-interval="50"></div>
-                    <h5>Projects completed</h5>                               
+                    <h5>Projects completed</h5>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="counter-item">
                     <i class="glyphicon glyphicon-console"></i>
                     <div class="timer" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></div>
-                    <h5>Lines of code written</h5>                                                   
+                    <h5>Lines of code written</h5>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="counter-item">
                     <i class="glyphicon glyphicon-user"></i>
                     <div class="timer" data-from="0" data-to="86" data-speed="5000" data-refresh-interval="50"></div>
-                    <h5>Happy clients</h5>                                                   
-                </div>     
+                    <h5>Happy clients</h5>
+                </div>
 			</div>
 		</div>
 	</div>
 </div>
 </div>
+-->
 
+<!-- Contact form
 <div class="container-fluid contact" id="section4">
 	<div class="container">
 		<div class="row">
@@ -274,12 +278,12 @@
                         <div class="form-group">
                             <input type="text" class="form-control form-effect" id="name" placeholder="Name">
                         </div>
-                        <div class="form-group">                                 
+                        <div class="form-group">
                             <input type="email" class="form-control form-effect" id="email" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <textarea type="textarea" class="form-control form-effect" id="text" placeholder="Message"></textarea>
-                        </div>  
+                        </div>
                         <button type="submit" class="btn btn-default btn-sub">Submit</button>
                     </form>
 				</div>
@@ -296,8 +300,9 @@
 		</div>
 	</div>
 </div>
+-->
 
-
+<!-- LOREM ISPSUM button
 <div class="container-fluid notes">
   	<div class="row">
    		<div class="col-md-12 col-sm-12 col-xs-12 notes-bg">
@@ -310,9 +315,9 @@
     			</div>
    			</div>
    		</div>
-  	</div> 
+  	</div>
 </div>
-
+-->
 
 
 <div class="container-fluid footer">
@@ -331,6 +336,10 @@
     <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/lightbox.min.js"></script>
+
+    <!-- Angular.js -->
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <!-- google maps code
     <script>
       function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
@@ -343,19 +352,20 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    -->
     <script>
 	$(document).ready(function () {
 		$(document).on("scroll", onScroll);
- 
+
 		$('a[href^="#"]').on('click', function (e) {
 			e.preventDefault();
 			$(document).off("scroll");
- 
+
 			$('a').each(function () {
 				$(this).removeClass('active');
 			})
 			$(this).addClass('active');
- 
+
 			var target = this.hash;
 			$target = $(target);
 			$('html, body').stop().animate({
@@ -366,7 +376,7 @@
 			});
 		});
 	});
- 
+
 	function onScroll(event){
 		var scrollPosition = $(document).scrollTop();
 		$('nav a').each(function () {
@@ -390,12 +400,12 @@
           return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
         }
       });
- 
+
       // start all the timers
       $('#starts').waypoint(function() {
     $('.timer').each(count);
 	});
- 
+
       function count(options) {
         var $this = $(this);
         options = $.extend({}, options || {}, $this.data('countToOptions') || {});
