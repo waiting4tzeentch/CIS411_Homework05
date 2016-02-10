@@ -12,11 +12,5 @@
 		});
 	}]);
 
-	app.directives (angularJumbotron, function (){
-		return {
-			restict: 'E',
-			templateUrl: 'angularJumbotron.html'
-		}
-	});
-
+	
 })();
