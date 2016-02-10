@@ -6,6 +6,13 @@
     <title>CIS 411 Homework 05</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <!-- Angular.js -->
+      <script type="text/javascript" src="js/angular.min.js"></script>
+
+      <!-- Angular Modules -->
+      <script type="text/javascript" src="scripts/bookApp.js"></script>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="css/lightbox.css" rel="stylesheet">
@@ -21,7 +28,7 @@
 
 </head>
 
-<body ng-controller="BookController as booklist">
+<body ng-controller="BookController as angularLibrary">
   <header class="header">
     <div class="container">
       <div class="row">
@@ -37,7 +44,7 @@
         <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
           <ul class="nav navbar-nav navbar-right menu">
             <li><a href="#page-top" class="page-scroll active">Home</a></li>
-            <li><a href="#booklist" class="page-scroll">Angular Books</a></li>
+            <li><a href="#book-list" class="page-scroll">Angular Books</a></li>
             <li><a href="#work" class="page-scroll">Instruction</a></li>
           </ul>
         </nav>
@@ -77,14 +84,13 @@
 
   <!-- Book list -->
 
-  <div class="container-fluid work" id="booklist">
+  <div class="container-fluid work" id="book-list">
     <div class="container">
       <div class="row" id="starts">
         <div class="col-md-12 col-sm-12 col-xs-12 work-list">
           <h2 class="text-center portfolio-text">Angular Books</h2>
 
-          <div  class="col-md-4 col-sm-6 col-xs-12 work-space" 
-                ng-repeat="book in booklist.books">
+          <div  class="col-md-4 col-sm-6 col-xs-12 work-space" >
             <a href="images/story1.png" data-lightbox="image-1">
               <div class="featured-img">
                 <img src="images/story1.png"/>
@@ -94,7 +100,7 @@
                 <i class="glyphicon glyphicon-eye-open"></i>
               </div>
 
-              <h3>{{book.title}}</h3>
+              <h3>{{angularLibrary.books[0].title}}</h3>
             </a>
           </div>
         </div>
@@ -123,11 +129,7 @@
       <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
       <script src="js/lightbox.min.js"></script>
 
-      <!-- Angular.js -->
-      <script type="text/javascript" src="js/angular.min.js"></script>
-
-      <!-- Angular Modules -->
-      <script type="text/javascript" src="scripts/bookApp.js"></script>
+      
       <!--<script type="text/javascript" src="scripts/book.js"></script>-->
 
       <!-- Scrolling scripts -->
