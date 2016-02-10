@@ -1,12 +1,4 @@
-# cis411-homework05
+CIS411_Homework05
+Homework for CIS411 at the college of business at University of Louisville.
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Link to Assignment:https://github.com/wesreisz/angular-homework2
